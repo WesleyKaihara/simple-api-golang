@@ -3,6 +3,9 @@ GET http://localhost:8000/ping
 ###
 GET http://localhost:8000/products
 
+###
+GET http://localhost:8000/product/4
+
 ### 
 POST http://localhost:8000/product
 Content-Type: application/json

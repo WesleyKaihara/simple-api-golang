@@ -30,3 +30,14 @@ func (pu *ProductUsecase) CreateProduct(product model.Product) (model.Product, e
 	product.ID = productId
 	return product, nil
 }
+
+func (pu *ProductUsecase) GetProductById(product_id int) (*model.Product, error) {
+
+	product, err := pu.repository.GetProductById(product_id)
+
+	if err != nil {
+		return nil, err
+	}
+
+	return product, nil
+}
